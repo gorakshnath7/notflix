@@ -51,7 +51,7 @@ function fetchAndShow() {
           let imageAndInfo = "";
 
           if (result.qid === "movie" && result.i) {
-            imageAndInfo = `<a onClick="setUrl(this); return setVideo(this);" url="imdb=${result.id}&type=movie&title=${result.l.replace(/ /g, "_")}" isWebSeries="false" title="${result.l}"  class="links" IMDB="${result.id}" href="https://embed.smashystream.com/playere.php?imdb=IMDB_ID=${result.id}" target="_blank">
+            imageAndInfo = `<a onClick="setUrl(this); return setVideo(this);" url="imdb=${result.id}&type=movie&title=${result.l.replace(/ /g, "_")}" isWebSeries="false" title="${result.l}"  class="links" IMDB="${result.id}" href="https://www.2embed.cc/embed/{IMDB-ID}=${result.id}" target="_blank">
                      <img alt="${result.l}" src="${optimisedImageUrl(result.i.imageUrl)}">
                       <div class="info">
                        <h3>${result.l}</h3>
@@ -59,7 +59,7 @@ function fetchAndShow() {
                       </div>
                    </a>`;
           } else if (result.qid === "tvSeries" && result.i) {
-            imageAndInfo = `<a onClick="setUrl(this); return setVideo(this);" url="imdb=${result.id}&season=1&episode=1&title=${result.l.replace(/ /g, "_")}" IMDB="${result.id}" title="${result.l}" isWebSeries="true" class="links" href="https://embed.smashystream.com/playere.php?imdb=IMDB_ID=${result.id}&s=1&e=1" target="_blank">
+            imageAndInfo = `<a onClick="setUrl(this); return setVideo(this);" url="imdb=${result.id}&season=1&episode=1&title=${result.l.replace(/ /g, "_")}" IMDB="${result.id}" title="${result.l}" isWebSeries="true" class="links" href="https://www.2embed.cc/embed/{IMDB-ID}=${result.id}&s=1&e=1" target="_blank">
                       <img alt="${result.l}" src="${optimisedImageUrl(result.i.imageUrl)}">
                         <div class="info">
                           <h3>${result.l}</h3>
@@ -88,7 +88,7 @@ function setAll(imdb, title, season, episode, type) {
     a.setAttribute("title", title);
     a.setAttribute("class", "links");
     a.setAttribute("IMDB", imdb);
-    a.setAttribute("href", " https://embed.smashystream.com/playere.php?imdb=IMDB_ID=" + imdb);
+    a.setAttribute("href", " https://www.2embed.cc/embed/{IMDB-ID}=" + imdb);
     a.setAttribute("target", "_blank");
     a.click();
   } else if (imdb && title && episode && !type) {
