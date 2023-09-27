@@ -30,8 +30,7 @@ Open the project directory and run `index.html`.
 
 ## Features
 
-OHMcrypto
-https://ohmcrypto.com
+[OHMcrypto](https://ohmcrypto.com/)
 
 - Watch any movie, webseries, TV show or anime for free.
 - **Url Sharing**  
